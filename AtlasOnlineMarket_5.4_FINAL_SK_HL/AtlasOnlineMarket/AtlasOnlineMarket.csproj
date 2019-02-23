@@ -1,0 +1,444 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AA9AA83A-7018-4356-AE16-1BEA9463A408}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AtlasOnlineMarket</RootNamespace>
+    <AssemblyName>AtlasOnlineMarket</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminMainPage.aspx" />
+    <Content Include="App_Data\Atlas.mdf" />
+    <Content Include="App_Data\Atlas_log.ldf">
+      <DependentUpon>Atlas.mdf</DependentUpon>
+    </Content>
+    <Content Include="Buyer\cartPage.aspx" />
+    <Content Include="Buyer\checkOut.aspx" />
+    <Content Include="Buyer\mainPage.aspx" />
+    <Content Include="Buyer\productView.aspx" />
+    <Content Include="Buyer\thankYou.aspx" />
+    <Content Include="Buyer\orderMan.aspx" />
+    <Content Include="css\.DS_Store" />
+    <Content Include="css\style.css" />
+    <Content Include="fonts\.DS_Store" />
+    <Content Include="fonts\font-awesome\.DS_Store" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="fonts\font-awesome\less\animated.less" />
+    <Content Include="fonts\font-awesome\less\bordered-pulled.less" />
+    <Content Include="fonts\font-awesome\less\core.less" />
+    <Content Include="fonts\font-awesome\less\fixed-width.less" />
+    <Content Include="fonts\font-awesome\less\font-awesome.less" />
+    <Content Include="fonts\font-awesome\less\icons.less" />
+    <Content Include="fonts\font-awesome\less\larger.less" />
+    <Content Include="fonts\font-awesome\less\list.less" />
+    <Content Include="fonts\font-awesome\less\mixins.less" />
+    <Content Include="fonts\font-awesome\less\path.less" />
+    <Content Include="fonts\font-awesome\less\rotated-flipped.less" />
+    <Content Include="fonts\font-awesome\less\stacked.less" />
+    <Content Include="fonts\font-awesome\less\variables.less" />
+    <Content Include="fonts\font-awesome\scss\font-awesome.scss" />
+    <Content Include="fonts\font-awesome\scss\_animated.scss" />
+    <Content Include="fonts\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="fonts\font-awesome\scss\_core.scss" />
+    <Content Include="fonts\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="fonts\font-awesome\scss\_icons.scss" />
+    <Content Include="fonts\font-awesome\scss\_larger.scss" />
+    <Content Include="fonts\font-awesome\scss\_list.scss" />
+    <Content Include="fonts\font-awesome\scss\_mixins.scss" />
+    <Content Include="fonts\font-awesome\scss\_path.scss" />
+    <Content Include="fonts\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="fonts\font-awesome\scss\_stacked.scss" />
+    <Content Include="fonts\font-awesome\scss\_variables.scss" />
+    <Content Include="fonts\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Global.asax" />
+    <Content Include="img\.DS_Store" />
+    <Content Include="img\NotAvail.jpg" />
+    <Content Include="landingPage.aspx" />
+    <Content Include="CategoryRelation.xsc">
+      <DependentUpon>CategoryRelation.xsd</DependentUpon>
+    </Content>
+    <None Include="CategoryRelation.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CategoryRelation.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="CategoryRelation.xss">
+      <DependentUpon>CategoryRelation.xsd</DependentUpon>
+    </Content>
+    <Content Include="OrderRelations.xsc">
+      <DependentUpon>OrderRelations.xsd</DependentUpon>
+    </Content>
+    <None Include="OrderRelations.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderRelations.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="OrderRelations.xss">
+      <DependentUpon>OrderRelations.xsd</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <Content Include="Admin\ManageSeller.aspx" />
+    <Content Include="Admin\ManageSellers3.aspx" />
+    <Content Include="ProductsRelation.xsc">
+      <DependentUpon>ProductsRelation.xsd</DependentUpon>
+    </Content>
+    <None Include="ProductsRelation.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductsRelation.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="ProductsRelation.xss">
+      <DependentUpon>ProductsRelation.xsd</DependentUpon>
+    </Content>
+    <Content Include="Seller\orderView.aspx" />
+    <Content Include="UsersRelations.xsc">
+      <DependentUpon>UsersRelations.xsd</DependentUpon>
+    </Content>
+    <None Include="UsersRelations.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UsersRelations.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="UsersRelations.xss">
+      <DependentUpon>UsersRelations.xsd</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\nivo-lightbox\close%402x.png" />
+    <Content Include="css\nivo-lightbox\close.png" />
+    <Content Include="css\nivo-lightbox\default.css" />
+    <Content Include="css\nivo-lightbox\loading%402x.gif" />
+    <Content Include="css\nivo-lightbox\loading.gif" />
+    <Content Include="css\nivo-lightbox\next%402x.png" />
+    <Content Include="css\nivo-lightbox\next.png" />
+    <Content Include="css\nivo-lightbox\nivo-lightbox.css" />
+    <Content Include="css\nivo-lightbox\prev%402x.png" />
+    <Content Include="css\nivo-lightbox\prev.png" />
+    <Content Include="fonts\font-awesome\css\font-awesome.css" />
+    <Content Include="fonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="img\about.jpg" />
+    <Content Include="img\intro-bg.jpg" />
+    <Content Include="img\portfolio\01-large.jpg" />
+    <Content Include="img\portfolio\01-small.jpg" />
+    <Content Include="img\portfolio\02-large.jpg" />
+    <Content Include="img\portfolio\02-small.jpg" />
+    <Content Include="img\portfolio\03-large.jpg" />
+    <Content Include="img\portfolio\03-small.jpg" />
+    <Content Include="img\portfolio\04-large.jpg" />
+    <Content Include="img\portfolio\04-small.jpg" />
+    <Content Include="img\portfolio\05-large.jpg" />
+    <Content Include="img\portfolio\05-small.jpg" />
+    <Content Include="img\portfolio\06-large.jpg" />
+    <Content Include="img\portfolio\06-small.jpg" />
+    <Content Include="img\portfolio\07-large.jpg" />
+    <Content Include="img\portfolio\07-small.jpg" />
+    <Content Include="img\portfolio\08-large.jpg" />
+    <Content Include="img\portfolio\08-small.jpg" />
+    <Content Include="img\portfolio\09-large.jpg" />
+    <Content Include="img\portfolio\09-small.jpg" />
+    <Content Include="img\portfolio\10-large.jpg" />
+    <Content Include="img\portfolio\10-small.jpg" />
+    <Content Include="img\portfolio\11-large.jpg" />
+    <Content Include="img\portfolio\11-small.jpg" />
+    <Content Include="img\portfolio\12-large.jpg" />
+    <Content Include="img\portfolio\12-small.jpg" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\contact_me.js" />
+    <Content Include="js\jqBootstrapValidation.js" />
+    <Content Include="js\jquery.1.11.1.js" />
+    <Content Include="js\jquery.isotope.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\nivo-lightbox.js" />
+    <Content Include="js\SmoothScroll.js" />
+    <Content Include="login.aspx" />
+    <Content Include="Seller\manageOrders.aspx" />
+    <Content Include="Seller\manageProduct.aspx" />
+    <Content Include="Seller\newCategory.aspx" />
+    <Content Include="Seller\newProduct.aspx" />
+    <Content Include="Admin\ManageSeller2.aspx" />
+    <Content Include="registration.aspx" />
+    <Content Include="Seller\ProductManagement.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminMainPage.aspx.cs">
+      <DependentUpon>AdminMainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMainPage.aspx.designer.cs">
+      <DependentUpon>AdminMainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buyer\cartPage.aspx.cs">
+      <DependentUpon>cartPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buyer\cartPage.aspx.designer.cs">
+      <DependentUpon>cartPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buyer\checkOut.aspx.cs">
+      <DependentUpon>checkOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buyer\checkOut.aspx.designer.cs">
+      <DependentUpon>checkOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buyer\mainPage.aspx.cs">
+      <DependentUpon>mainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buyer\mainPage.aspx.designer.cs">
+      <DependentUpon>mainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buyer\Products.cs" />
+    <Compile Include="Buyer\productView.aspx.cs">
+      <DependentUpon>productView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buyer\productView.aspx.designer.cs">
+      <DependentUpon>productView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buyer\thankYou.aspx.cs">
+      <DependentUpon>thankYou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buyer\thankYou.aspx.designer.cs">
+      <DependentUpon>thankYou.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buyer\orderMan.aspx.cs">
+      <DependentUpon>orderMan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buyer\orderMan.aspx.designer.cs">
+      <DependentUpon>orderMan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryRelation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CategoryRelation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Encryptor.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageSeller.aspx.cs">
+      <DependentUpon>ManageSeller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageSeller.aspx.designer.cs">
+      <DependentUpon>ManageSeller.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageSellers3.aspx.cs">
+      <DependentUpon>ManageSellers3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageSellers3.aspx.designer.cs">
+      <DependentUpon>ManageSellers3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderRelations.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderRelations.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Seller\manageOrders.aspx.cs">
+      <DependentUpon>manageOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seller\manageOrders.aspx.designer.cs">
+      <DependentUpon>manageOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Seller\manageProduct.aspx.cs">
+      <DependentUpon>manageProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seller\manageProduct.aspx.designer.cs">
+      <DependentUpon>manageProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Seller\newCategory.aspx.cs">
+      <DependentUpon>newCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seller\newCategory.aspx.designer.cs">
+      <DependentUpon>newCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Seller\newProduct.aspx.cs">
+      <DependentUpon>newProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seller\newProduct.aspx.designer.cs">
+      <DependentUpon>newProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageSeller2.aspx.cs">
+      <DependentUpon>ManageSeller2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageSeller2.aspx.designer.cs">
+      <DependentUpon>ManageSeller2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsRelation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductsRelation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registration.aspx.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration.aspx.designer.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="landingPage.aspx.cs">
+      <DependentUpon>landingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="landingPage.aspx.designer.cs">
+      <DependentUpon>landingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Seller\orderView.aspx.cs">
+      <DependentUpon>orderView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seller\orderView.aspx.designer.cs">
+      <DependentUpon>orderView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Seller\ProductManagement.aspx.cs">
+      <DependentUpon>ProductManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Seller\ProductManagement.aspx.designer.cs">
+      <DependentUpon>ProductManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersRelations.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsersRelations.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img\pics\" />
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53781</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53781/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
